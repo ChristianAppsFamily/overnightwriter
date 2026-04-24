@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 220" width="600" height="220">
+  <rect width="600" height="220" fill="#ffffff"/>
+
+  <!-- OPTION A: Moon + Pen stroke -->
+  <g transform="translate(60, 30)">
+    <!-- Moon crescent -->
+    <path d="M60 80 C60 44 88 16 124 16 C106 28 94 52 94 80 C94 108 106 132 124 144 C88 144 60 116 60 80Z" fill="#111111"/>
+    <!-- Pen line cutting through -->
+    <line x1="85" y1="48" x2="118" y2="112" stroke="#111111" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Label -->
+    <text x="40" y="178" font-family="Georgia, serif" font-size="11" fill="#999999" letter-spacing="3" text-anchor="middle">A</text>
+  </g>
+
+  <!-- OPTION B: Moon page -->
+  <g transform="translate(220, 30)">
+    <!-- Page shape -->
+    <rect x="22" y="10" width="76" height="96" rx="3" fill="none" stroke="#111111" stroke-width="2.5"/>
+    <!-- Folded corner -->
+    <path d="M74 10 L98 34 L74 34 Z" fill="#111111"/>
+    <path d="M74 10 L98 34" stroke="#ffffff" stroke-width="1"/>
+    <!-- Moon rising from page bottom -->
+    <path d="M34 90 C34 72 44 58 60 58 C44 58 34 44 34 26" fill="none" stroke="none"/>
+    <path d="M28 106 C28 85 42 70 60 70 C42 70 28 55 28 34" fill="none" stroke="none"/>
+    <!-- Simple moon cut into page -->
+    <circle cx="60" cy="68" r="18" fill="none" stroke="#111111" stroke-width="2.5"/>
+    <circle cx="68" cy="62" r="16" fill="#ffffff"/>
+    <!-- Three lines like manuscript -->
+    <line x1="34" y1="116" x2="86" y2="116" stroke="#111111" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+    <line x1="34" y1="124" x2="72" y2="124" stroke="#111111" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+    <!-- Label -->
+    <text x="60" y="178" font-family="Georgia, serif" font-size="11" fill="#999999" letter-spacing="3" text-anchor="middle">B</text>
+  </g>
+
+  <!-- OPTION C: Pure moon mark — minimal -->
+  <g transform="translate(390, 22)">
+    <!-- Outer circle -->
+    <circle cx="60" cy="80" r="58" fill="none" stroke="#111111" stroke-width="2.5"/>
+    <!-- Inner offset circle creating crescent -->
+    <circle cx="74" cy="72" r="46" fill="#ffffff"/>
+    <!-- Single horizontal pen stroke across crescent -->
+    <line x1="18" y1="80" x2="54" y2="80" stroke="#111111" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Label -->
+    <text x="60" y="178" font-family="Georgia, serif" font-size="11" fill="#999999" letter-spacing="3" text-anchor="middle">C</text>
+  </g>
+
+  <!-- Bottom note -->
+  <text x="300" y="210" font-family="Georgia, serif" font-size="10" fill="#cccccc" letter-spacing="2" text-anchor="middle">OVERNIGHTWRITER — LOGO CONCEPTS</text>
+</svg>
