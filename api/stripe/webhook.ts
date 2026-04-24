@@ -35,7 +35,7 @@ export default async function handler(req: any, res: any) {
     switch (event.type) {
 
       case 'checkout.session.completed': {
-        const session = event.data.object as Stripe.CheckoutSession
+        const session = event.data.object as any
         const userId = session.metadata?.supabase_user_id
         const planId = session.metadata?.plan_id
         if (!userId || !planId) break
