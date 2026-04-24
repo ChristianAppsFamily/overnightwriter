@@ -140,15 +140,18 @@ export default function Editor() {
     setBlocks(prev => [...prev, ...newBlocks])
   }
 
-  // FIX #3: New draft only via dedicated button
+  // FIX #3: New draft only via dedicated button — guard against double-click
+  const creatingDraftRef = useRef(false)
   const handleNewDraft = async () => {
-    if (!draft || !scriptId) return
+    if (!draft || !scriptId || creatingDraftRef.current) return
+    creatingDraftRef.current = true
     await saveDraft(blocks)
     const newDraft = await createNewDraft(scriptId, { ...draft, content: blocks })
     if (newDraft) {
       await fetchScripts()
       navigate(`/editor/${scriptId}/${newDraft.draft_number}`)
     }
+    setTimeout(() => { creatingDraftRef.current = false }, 1000)
   }
 
   const handleExport = async (format: string) => {
